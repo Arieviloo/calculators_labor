@@ -1,0 +1,58 @@
+//Title
+"titleHome" = "O que você quer calcular?";
+"whichValueSalary" = "Qual o valor do seu salário bruto?";
+"subTitleValueSalary" = "Aqui você nos fala quanto você ganha sem descontos.";
+"howMuchDependents" = "Quantos dependentes você tem?";
+"subTitleValueDependents" = "São considerados dependentes: filhos, pais, companheiros ou pessoas cuja responsabilidade legal seja sua.";
+"questionDangerousnessAdditional" = "Recebe Adicional de Periculosidade?";
+"questionInsalubrityAdditional" = "Recebe Adicional de Insalubridade?";
+"questionLevelInsalubrity" = "Selecione o nível de insalubridade:";
+"questionOtherDiscount" = "Outros descontos";
+"questionOtherAdditional" = "Outros adicionais";
+"subtitleQuestionOtherAdditional" = "Aqui você considera horas extras, comissões, etc.";
+"optional" = "(opcional)";
+"simulateAgain" = "Simular Novamente";
+"doAnotherCalculation" = "Fazer outro cálculo";
+"howManyDaysDfVacation" = "Quantos dias de férias você vai tirar?";
+"willSellVacation" = "Você vai vender suas férias?";
+"homManyDays" = "Quantos dias?";
+"willAnticipateThirteenth" = "Você vai antecipar seu 13º Salário ?";
+
+"dateYourContracting" = "Data da sua contratação?";
+"dateYourResignation" = "Data da sua demissão?";
+"selectReasonYourResignation" = "Selecione o motivo da sua demissão";
+"HowWillItBeNoticePeriod" = "Como será o aviso prévio?";
+"YouHaveVacationAccumulated" = "Você tem férias acumuladas?";
+
+"monthWorked" = "Meses trabalhados";
+"typePayment" = "Tipo do pagamento";
+
+
+//Button
+"next" = "Próximo";
+"calculate" = "Calcular";
+
+//Result
+"result" = "Resultado";
+"yourEarnings" = "Seus ganhos";
+"yourDiscounts" = "Seus descontos";
+"grossSalary" = "Sálario bruto";
+"salaryVacation" = "Sálario / Férias";
+"oneThirdVacation" = "1/3 das férias";
+"allowanceMonetary" = "Abono pecuniário";
+"oneThirdAllowanceMonetary" = "1/3 Abono pecuniário";
+"advancedThirteenth" = "Adiantamento 1° parcela 13°";
+"additionalDangerouss" = "Adicional de periculosidade";
+"additionalInsalubrity" = "Adicional de insalubridade";
+"otherAdditional" = "Outros adicionais";
+"inss" = "INSS";
+"irrf" = "IRRF";
+"otherDiscounts" = "Outros descontos";
+"resultCaculation" = "Resultado do cálculo";
+"verbsRescission" = "Verbas rescisórias";
+"discounts" = "Descontos";
+"totalFGTS" = "Total FGTS";
+"noticePeriod" = "Aviso prévio";
+"accruedVacation" = "Férias vencidas";
+"typePortion" = "Tipo de parcela";
+"salaryProportional" = "Sálario propocional";
