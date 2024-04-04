@@ -26,6 +26,6 @@ class HomeViewModel {
 	
 	public func sizeCollectionView(view: UIView) -> CGSize {
 		let widthFrame = CGFloat((view.frame.width / 2 ) - 10)
-		return CGSize(width: widthFrame , height: 200)
+		return CGSize(width: widthFrame , height: widthFrame)
 	}
 }
