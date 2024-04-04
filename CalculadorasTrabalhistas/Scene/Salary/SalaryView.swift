@@ -96,14 +96,14 @@ class SalaryView: UIView {
 			dependentLabel.leadingAnchor.constraint(equalTo: salaryLabel.leadingAnchor),
 			dependentLabel.trailingAnchor.constraint(equalTo: salaryLabel.trailingAnchor),
 			
-			subtitleDependentLabel.topAnchor.constraint(equalTo: dependentLabel.bottomAnchor, constant: 10),
-			subtitleDependentLabel.leadingAnchor.constraint(equalTo: salaryLabel.leadingAnchor),
-			subtitleDependentLabel.trailingAnchor.constraint(equalTo: salaryLabel.trailingAnchor),
-			
-			dependentValueTextField.topAnchor.constraint(equalTo: subtitleDependentLabel.bottomAnchor, constant: 10),
+			dependentValueTextField.topAnchor.constraint(equalTo: dependentLabel.bottomAnchor, constant: 10),
 			dependentValueTextField.leadingAnchor.constraint(equalTo: salaryLabel.leadingAnchor),
 			dependentValueTextField.trailingAnchor.constraint(equalTo: salaryLabel.trailingAnchor),
 			dependentValueTextField.heightAnchor.constraint(equalToConstant: 40),
+			
+			subtitleDependentLabel.topAnchor.constraint(equalTo: dependentValueTextField.bottomAnchor, constant: 10),
+			subtitleDependentLabel.leadingAnchor.constraint(equalTo: salaryLabel.leadingAnchor),
+			subtitleDependentLabel.trailingAnchor.constraint(equalTo: salaryLabel.trailingAnchor),
 			
 			nextButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -200),
 			nextButton.centerXAnchor.constraint(equalTo: centerXAnchor),
