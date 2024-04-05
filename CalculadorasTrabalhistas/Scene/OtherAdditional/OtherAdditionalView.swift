@@ -42,7 +42,7 @@ class OtherAdditionalView: UIView {
 	}(UILabel())
 	
 	lazy var calculateButton: UIButton = {
-		$0.setCustomButton(title: "calculate", colorBackground: UIColor.appBlueHeavy)
+		$0.setCustomButton(title: "calculate", colorBackground: UIColor.appBlue)
 		$0.addTarget(self, action: #selector(tappedCalculate), for: .touchUpInside)
 		return $0
 	}(UIButton(type: .system))
