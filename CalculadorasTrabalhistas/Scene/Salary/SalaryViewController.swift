@@ -29,18 +29,21 @@ class SalaryViewController: UIViewController {
 		title = salaryVM.getTitle()
 		self.salaryView.configTextFieldDelegate(delegate: self)
 		self.salaryView.delegate(delegate: self)
+		salaryView.disableNextButton()
 	}
 }
 
 extension SalaryViewController: UITextFieldDelegate {
-	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool { 
-		// return NO to not change text
-
+	
+	
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		if salaryView.salaryValueTextField.isEditing {
+			
 			switch string {
 			case "0"..."9":
 				currentString += string
 				currencyInputFormatting(string: currentString, textField: salaryView.salaryValueTextField)
+				salaryView.enableNextButton()
 			default:
 				let array = Array(string)
 				var currentStringArray = Array(currentString)
@@ -52,7 +55,7 @@ extension SalaryViewController: UITextFieldDelegate {
 					}
 					currencyInputFormatting(string: currentString, textField: salaryView.salaryValueTextField)
 				}
-			}	
+			}
 		} else {
 			return true
 		}
