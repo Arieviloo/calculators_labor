@@ -1,6 +1,14 @@
 import UIKit
 
 extension UIViewController {
+	
+	func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+		if let delegate = UIApplication.shared.delegate as? AppDelegate {
+			delegate.orientationLock = orientation
+		}
+	}
+	
+	
 	func getCalculatorViewController(calculator: Calculator) -> UIViewController {
 		let nameCalculator = calculator.nameViewController
 		

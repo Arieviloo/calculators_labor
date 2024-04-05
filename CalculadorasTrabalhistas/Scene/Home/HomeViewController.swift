@@ -25,7 +25,9 @@ class HomeViewController: UIViewController {
 		self.navigationController?.navigationBar.titleTextAttributes =  homeVM.getCustomTitle()
 		view.backgroundColor = homeVM.getColorBackground()
 		self.homeView.configProtocolCollectionView(delegate: self, dataSource: self)
+		self.lockOrientation(.portrait)
 	}
+	
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
