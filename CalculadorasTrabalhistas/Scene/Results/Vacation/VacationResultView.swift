@@ -12,6 +12,16 @@ class VacationResultView: UIView {
 		self.delegate = delegate
 	}
 	
+	lazy var scroolView: UIScrollView = {
+		$0.translatesAutoresizingMaskIntoConstraints = false
+		return $0
+	}(UIScrollView())
+	
+	lazy var contentStackView: UIView = {
+		$0.translatesAutoresizingMaskIntoConstraints = false
+		return $0
+	}(UIView())
+	
 	lazy var titleLabel: UILabel = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
 		$0.text = "Férias"
@@ -230,8 +240,10 @@ class VacationResultView: UIView {
 	}
 	
 	private func configAddView() {
-		addSubview(titleLabel)
-		addSubview(contentView)
+		addSubview(scroolView)
+		scroolView.addSubview(contentStackView)
+		contentStackView.addSubview(titleLabel)
+		contentStackView.addSubview(contentView)
 		contentView.addSubview(yourEarningsLabel)
 		contentView.addSubview(salaryVacationLabel)
 		contentView.addSubview(valueSalaryVacationLabel)
@@ -260,15 +272,28 @@ class VacationResultView: UIView {
 		contentView.addSubview(valueOtherDiscountsLabel)
 		contentView.addSubview(resultLabel)
 		contentView.addSubview(valueResultLabel)
-		addSubview(simulateAgainButton)
-		addSubview(otherCalculationButton)
+		contentStackView.addSubview(simulateAgainButton)
+		contentStackView.addSubview(otherCalculationButton)
 	}
 	
 	private func configConstraints() {
+		
 		NSLayoutConstraint.activate([
-			titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-			titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-			titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
+			scroolView.topAnchor.constraint(equalTo: topAnchor),
+			scroolView.bottomAnchor.constraint(equalTo: bottomAnchor),
+			scroolView.leadingAnchor.constraint(equalTo: leadingAnchor),
+			scroolView.trailingAnchor.constraint(equalTo: trailingAnchor),
+			
+			contentStackView.topAnchor.constraint(equalTo: scroolView.topAnchor),
+			contentStackView.bottomAnchor.constraint(equalTo: scroolView.bottomAnchor),
+			contentStackView.leadingAnchor.constraint(equalTo: scroolView.leadingAnchor),
+			contentStackView.trailingAnchor.constraint(equalTo: scroolView.trailingAnchor),
+			contentStackView.widthAnchor.constraint(equalTo: scroolView.widthAnchor),
+			contentStackView.heightAnchor.constraint(equalTo: scroolView.heightAnchor),
+			
+			titleLabel.topAnchor.constraint(equalTo: contentStackView.topAnchor, constant: 40),
+			titleLabel.leadingAnchor.constraint(equalTo: contentStackView.leadingAnchor, constant: 15),
+			titleLabel.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor, constant: -15),
 			
 			contentView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
 			contentView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
