@@ -13,18 +13,11 @@ class SalaryView: UIView {
 	
 	lazy var salaryLabel = CTLabel(titleLabel: "whichValueSalary", fontSize: 16, nameFont: "Montserrat-light")
 	lazy var salaryValueTextField = CTTextField()
-	
 	lazy var subtitleSalaryLabel = CTLabel(titleLabel: "subTitleValueSalary", fontSize: 10, nameFont: "Montserrat-Medium")
-	
-	
-	lazy var dependentLabel: UILabel = {
-		$0.setCustomTitleNormal(title: "howMuchDependents")
-		return $0
-	}(UILabel())
-	
-	lazy var subtitleDependentLabel = CTLabel(titleLabel: "subTitleValueDependents", fontSize: 10, nameFont: "Montserrat-Medium")
-	
+
+	lazy var dependentLabel = CTLabel(titleLabel: "howMuchDependents", fontSize: 16, nameFont: "Montserrat-light")
 	lazy var dependentValueTextField = CTTextField()
+	lazy var subtitleDependentLabel = CTLabel(titleLabel: "subTitleValueDependents", fontSize: 10, nameFont: "Montserrat-Medium")
 	
 	lazy var nextButton: UIButton = {
 		$0.setCustomButton(title: "next", colorBackground: UIColor.appBlue)
