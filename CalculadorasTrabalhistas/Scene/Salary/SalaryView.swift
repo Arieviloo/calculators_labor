@@ -11,35 +11,20 @@ class SalaryView: UIView {
 		self.delegate = delegate
 	}
 	
-	lazy var salaryLabel: UILabel = {
-		$0.setCustomTitleNormal(title: "whichValueSalary")
-		return $0
-	}(UILabel())
+	lazy var salaryLabel = CTLabel(titleLabel: "whichValueSalary", fontSize: 16, nameFont: "Montserrat-light")
+	lazy var salaryValueTextField = CTTextField()
 	
-	lazy var salaryValueTextField: UITextField = {
-		$0.setCustomTextField()
-		return $0
-	}(UITextField())
+	lazy var subtitleSalaryLabel = CTLabel(titleLabel: "subTitleValueSalary", fontSize: 10, nameFont: "Montserrat-Medium")
 	
-	lazy var subtitleSalaryLabel: UILabel = {
-		$0.setCustomSubtitle(subtitle: "subTitleValueSalary")
-		return $0
-	}(UILabel())
 	
 	lazy var dependentLabel: UILabel = {
 		$0.setCustomTitleNormal(title: "howMuchDependents")
 		return $0
 	}(UILabel())
 	
-	lazy var subtitleDependentLabel: UILabel = {
-		$0.setCustomSubtitle(subtitle: "subTitleValueDependents")
-		return $0
-	}(UILabel())
+	lazy var subtitleDependentLabel = CTLabel(titleLabel: "subTitleValueDependents", fontSize: 10, nameFont: "Montserrat-Medium")
 	
-	lazy var dependentValueTextField: UITextField = {
-		$0.setCustomTextField()
-		return $0
-	}(UITextField())
+	lazy var dependentValueTextField = CTTextField()
 	
 	lazy var nextButton: UIButton = {
 		$0.setCustomButton(title: "next", colorBackground: UIColor.appBlue)

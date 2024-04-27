@@ -37,7 +37,7 @@ extension UILabel {
 extension UITextField {
 	func setCustomTextField() {
 		translatesAutoresizingMaskIntoConstraints = false
-		leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 40))
+//		leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 40))	
 		leftViewMode = .always
 		font = UIFont.systemFont(ofSize: 18)
 		backgroundColor = UIColor.appGray
@@ -45,6 +45,7 @@ extension UITextField {
 		layer.cornerRadius = 10
 		autocorrectionType = .no
 		keyboardType = .numberPad
+		borderStyle = .roundedRect
 	}
 }
 
