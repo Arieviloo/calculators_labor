@@ -20,10 +20,9 @@ class SalaryView: UIView {
 	lazy var subtitleDependentLabel = CTLabel(titleLabel: "subTitleValueDependents", fontSize: 10, nameFont: "Montserrat-Medium")
 	
 	lazy var nextButton: UIButton = {
-		$0.setCustomButton(title: "next", colorBackground: UIColor.appBlue)
 		$0.addTarget(self, action: #selector(tappedNext), for: .touchUpInside)
 		return $0
-	}(UIButton(type: .system))
+	}(CTButton(title: "next", colorBackground: UIColor.appBlue))
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)

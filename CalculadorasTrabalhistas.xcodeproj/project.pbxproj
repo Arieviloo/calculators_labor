@@ -32,6 +32,7 @@
 		E23773AF2BA2647100171780 /* VacationAccumulatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23773AE2BA2647100171780 /* VacationAccumulatedViewController.swift */; };
 		E23773B12BA2647700171780 /* VacationAccumulatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23773B02BA2647700171780 /* VacationAccumulatedView.swift */; };
 		E23773B32BA2647F00171780 /* VacationAccumulatedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23773B22BA2647F00171780 /* VacationAccumulatedViewModel.swift */; };
+		E23B35382BDDB55C00206817 /* CTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B35372BDDB55C00206817 /* CTButton.swift */; };
 		E24090242B61508F00EBA746 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24090232B61508F00EBA746 /* HomeViewModel.swift */; };
 		E249714F2B28E5BF000AD4F8 /* CustomDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E249714E2B28E5BF000AD4F8 /* CustomDesign.swift */; };
 		E24EFECB2B6528FE00B47572 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24EFECA2B6528FE00B47572 /* ResultViewModel.swift */; };
@@ -112,6 +113,7 @@
 		E23773AE2BA2647100171780 /* VacationAccumulatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationAccumulatedViewController.swift; sourceTree = "<group>"; };
 		E23773B02BA2647700171780 /* VacationAccumulatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationAccumulatedView.swift; sourceTree = "<group>"; };
 		E23773B22BA2647F00171780 /* VacationAccumulatedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationAccumulatedViewModel.swift; sourceTree = "<group>"; };
+		E23B35372BDDB55C00206817 /* CTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTButton.swift; sourceTree = "<group>"; };
 		E24090232B61508F00EBA746 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E249714E2B28E5BF000AD4F8 /* CustomDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDesign.swift; sourceTree = "<group>"; };
 		E24EFECA2B6528FE00B47572 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				E216C6F52BDD47F600949523 /* CTTextField.swift */,
 				E216C6F72BDD4E5B00949523 /* CTLabel.swift */,
+				E23B35372BDDB55C00206817 /* CTButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				E216C6F62BDD47F600949523 /* CTTextField.swift in Sources */,
 				E2BE94512B274FB3003FE825 /* HomeView.swift in Sources */,
 				E2195B282B6BDEBA00F029C0 /* VacationViewController.swift in Sources */,
+				E23B35382BDDB55C00206817 /* CTButton.swift in Sources */,
 				E21074882B2BC30200A7D523 /* OtherAdditionalView.swift in Sources */,
 				E20066982BA2172400CAC884 /* ListReasonView.swift in Sources */,
 				E21CC28D2B5565C10089933E /* ResultViewController.swift in Sources */,
