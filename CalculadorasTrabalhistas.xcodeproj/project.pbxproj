@@ -17,6 +17,8 @@
 		E201C0FC2B2C722800DFCDEF /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E201C0FB2B2C722800DFCDEF /* UIViewController+Extension.swift */; };
 		E21074862B2BC2FB00A7D523 /* OtherAdditionalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21074852B2BC2FB00A7D523 /* OtherAdditionalViewController.swift */; };
 		E21074882B2BC30200A7D523 /* OtherAdditionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21074872B2BC30200A7D523 /* OtherAdditionalView.swift */; };
+		E216C6F62BDD47F600949523 /* CTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216C6F52BDD47F600949523 /* CTTextField.swift */; };
+		E216C6F82BDD4E5B00949523 /* CTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216C6F72BDD4E5B00949523 /* CTLabel.swift */; };
 		E2195B282B6BDEBA00F029C0 /* VacationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2195B272B6BDEBA00F029C0 /* VacationViewController.swift */; };
 		E2195B2A2B6BDEC800F029C0 /* VacationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2195B292B6BDEC800F029C0 /* VacationView.swift */; };
 		E2195B2C2B6BDED000F029C0 /* VacationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2195B2B2B6BDED000F029C0 /* VacationViewModel.swift */; };
@@ -95,6 +97,8 @@
 		E201C0FB2B2C722800DFCDEF /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		E21074852B2BC2FB00A7D523 /* OtherAdditionalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAdditionalViewController.swift; sourceTree = "<group>"; };
 		E21074872B2BC30200A7D523 /* OtherAdditionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAdditionalView.swift; sourceTree = "<group>"; };
+		E216C6F52BDD47F600949523 /* CTTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTTextField.swift; sourceTree = "<group>"; };
+		E216C6F72BDD4E5B00949523 /* CTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTLabel.swift; sourceTree = "<group>"; };
 		E2195B272B6BDEBA00F029C0 /* VacationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationViewController.swift; sourceTree = "<group>"; };
 		E2195B292B6BDEC800F029C0 /* VacationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationView.swift; sourceTree = "<group>"; };
 		E2195B2B2B6BDED000F029C0 /* VacationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationViewModel.swift; sourceTree = "<group>"; };
@@ -202,6 +206,15 @@
 				E21074872B2BC30200A7D523 /* OtherAdditionalView.swift */,
 			);
 			path = OtherAdditional;
+			sourceTree = "<group>";
+		};
+		E216C6F42BDD47CB00949523 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				E216C6F52BDD47F600949523 /* CTTextField.swift */,
+				E216C6F72BDD4E5B00949523 /* CTLabel.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		E2195B262B6BDEA000F029C0 /* Vacation */ = {
@@ -436,9 +449,10 @@
 		E2F81AFD2B23592600E181B7 /* CalculadorasTrabalhistas */ = {
 			isa = PBXGroup;
 			children = (
-				E2AAE4EF2B2792E5008A5543 /* Model */,
 				E2F81B122B235A5100E181B7 /* Application */,
 				E2F81B132B235A6100E181B7 /* Extension */,
+				E2AAE4EF2B2792E5008A5543 /* Model */,
+				E216C6F42BDD47CB00949523 /* CustomViews */,
 				E2F81B162B235A9300E181B7 /* Scene */,
 				E2F81B172B235AA400E181B7 /* Resource */,
 				E2F81B0C2B23592700E181B7 /* Info.plist */,
@@ -629,6 +643,7 @@
 				E2A5ABB72BB4540300E8E193 /* ThirteenthResultView.swift in Sources */,
 				E254BF6E2BA0B74A0017F6C4 /* RescissionViewController.swift in Sources */,
 				E26539E42BB34D3300D70C28 /* ListTypePaymentViewCell.swift in Sources */,
+				E216C6F82BDD4E5B00949523 /* CTLabel.swift in Sources */,
 				E201C0FC2B2C722800DFCDEF /* UIViewController+Extension.swift in Sources */,
 				E2000B622B63F722000B5544 /* AdditionalViewModel.swift in Sources */,
 				E290A6E52B288FFA00560137 /* SalaryViewController.swift in Sources */,
@@ -636,6 +651,7 @@
 				E2005A682BA98A150084FC24 /* RescissionResultViewController.swift in Sources */,
 				E200669A2BA2172F00CAC884 /* ListReasonViewModel.swift in Sources */,
 				E2F81B152B235A7700E181B7 /* UIColor+Extension.swift in Sources */,
+				E216C6F62BDD47F600949523 /* CTTextField.swift in Sources */,
 				E2BE94512B274FB3003FE825 /* HomeView.swift in Sources */,
 				E2195B282B6BDEBA00F029C0 /* VacationViewController.swift in Sources */,
 				E21074882B2BC30200A7D523 /* OtherAdditionalView.swift in Sources */,
