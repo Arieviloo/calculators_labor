@@ -19,13 +19,7 @@ class AdditionalView: UIView {
 		return $0
 	}(UILabel())
 	
-	lazy var toggleDangerousnessSwitch: UISwitch = {
-		$0.translatesAutoresizingMaskIntoConstraints = false
-		$0.transform = CGAffineTransform(scaleX: 0.70, y: 0.70)
-		$0.onTintColor = UIColor.appGreenLight
-		$0.isEnabled = true
-		return $0
-	}(UISwitch())
+	lazy var toggleDangerousnessSwitch = CTToggle()
 	
 	lazy var insalubrityLabel: UILabel = {
 		$0.setCustomTitleNormal(title: "questionInsalubrityAdditional")
@@ -33,14 +27,9 @@ class AdditionalView: UIView {
 	}(UILabel())
 	
 	lazy var toggleInsalubritySwitch: UISwitch = {
-		$0.translatesAutoresizingMaskIntoConstraints = false
-		$0.transform = CGAffineTransform(scaleX: 0.70, y: 0.70)
-		$0.onTintColor = UIColor.appGreenLight
-		$0.isEnabled = true
 		$0.addTarget(self, action: #selector(tappedAdditionalInsalubrity), for: .touchUpInside)
-		
 		return $0
-	}(UISwitch())
+	}(CTToggle())
 	
 	lazy var contentView: UIStackView = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
