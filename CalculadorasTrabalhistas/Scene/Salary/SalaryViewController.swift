@@ -29,7 +29,7 @@ class SalaryViewController: UIViewController {
 		title = salaryVM.getTitle()
 		self.salaryView.configTextFieldDelegate(delegate: self)
 		self.salaryView.delegate(delegate: self)
-		salaryView.disableNextButton()
+		salaryView.isEnableNextButton(false)
 	}
 	
 }
@@ -45,12 +45,16 @@ extension SalaryViewController: UITextFieldDelegate {
 					currentString += string
 					currencyInputFormatting(string: currentString, textField: salaryView.salaryValueTextField)
 				}
-				salaryView.enableNextButton()
+				salaryView.isEnableNextButton(true)
 			default:
 				let array = Array(string)
 				var currentStringArray = Array(currentString)
+			
 				if array.count == 0 && currentStringArray.count != 0 {
 					currentStringArray.removeLast()
+					if currentStringArray.count == 0 {
+						salaryView.isEnableNextButton(false)
+					}
 					currentString = ""
 					for character in currentStringArray {
 						currentString += String(character)

@@ -50,6 +50,11 @@ class SalaryView: UIView {
 		nextButton.backgroundColor = UIColor.appBlue
 	}
 	
+	public func isEnableNextButton(_ isEnable: Bool) {
+		nextButton.isEnabled = isEnable
+		nextButton.backgroundColor = isEnable ? UIColor.appBlue : UIColor.appGray
+	}
+	
 	@objc func tappedNext() {
 		self.delegate?.tappedNext()
 	}
