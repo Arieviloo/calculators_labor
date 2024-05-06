@@ -49,7 +49,7 @@ extension SalaryViewController: UITextFieldDelegate {
 			default:
 				let array = Array(string)
 				var currentStringArray = Array(currentString)
-			
+				
 				if array.count == 0 && currentStringArray.count != 0 {
 					currentStringArray.removeLast()
 					if currentStringArray.count == 0 {

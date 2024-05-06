@@ -40,16 +40,6 @@ class SalaryView: UIView {
 		dependentValueTextField.delegate = delegate
 	}
 	
-	public func disableNextButton() {
-		nextButton.isEnabled = false
-		nextButton.backgroundColor = UIColor.appGray
-	}
-	
-	public func enableNextButton() {
-		nextButton.isEnabled = true
-		nextButton.backgroundColor = UIColor.appBlue
-	}
-	
 	public func isEnableNextButton(_ isEnable: Bool) {
 		nextButton.isEnabled = isEnable
 		nextButton.backgroundColor = isEnable ? UIColor.appBlue : UIColor.appGray
