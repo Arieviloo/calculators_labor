@@ -25,12 +25,18 @@ class SalaryViewController: UIViewController {
 		configView()
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		currentString = ""
+		salaryView.salaryValueTextField.text = ""
+	}
+	
 	private func configView() {
 		title = salaryVM.getTitle()
 		self.salaryView.configTextFieldDelegate(delegate: self)
 		self.salaryView.delegate(delegate: self)
 		salaryView.isEnableNextButton(false)
 	}
+	
 	
 }
 
