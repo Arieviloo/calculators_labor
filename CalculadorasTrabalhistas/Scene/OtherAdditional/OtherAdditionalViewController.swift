@@ -33,13 +33,15 @@ class OtherAdditionalViewController: UIViewController {
 }
 
 extension OtherAdditionalViewController: UITextFieldDelegate {
-		
+	
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		if netSalaryView.otherDiscountTextField.isEditing {
 			switch string {
 			case "0"..."9":
-				currentStringDiscount += string
-				currencyInputFormatting(string: currentStringDiscount, textField: netSalaryView.otherDiscountTextField)
+				if currentStringDiscount.count < 9 {
+					currentStringDiscount += string
+					currencyInputFormatting(string: currentStringDiscount, textField: netSalaryView.otherDiscountTextField)
+				}
 			default:
 				let array = Array(string)
 				var currentStringArray = Array(currentStringDiscount)
@@ -57,8 +59,10 @@ extension OtherAdditionalViewController: UITextFieldDelegate {
 		if netSalaryView.otherAdditionalTextField.isEditing {
 			switch string {
 			case "0"..."9":
-				currentString += string
-				currencyInputFormatting(string: currentString, textField: netSalaryView.otherAdditionalTextField)
+				if currentString.count < 9 {
+					currentString += string
+					currencyInputFormatting(string: currentString, textField: netSalaryView.otherAdditionalTextField)
+				}
 			default:
 				let array = Array(string)
 				var currentStringArray = Array(currentString)
