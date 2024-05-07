@@ -25,12 +25,7 @@ class OtherAdditionalView: UIView {
 		$0.setCustomTitleNormal(title: "questionOtherAdditional")
 		return $0
 	}(UILabel())
-	
-	lazy var optionalLabel: UILabel = {
-		$0.setCustomTitleOptional(title: "optional")
-		return $0
-	}(UILabel())
-	
+
 	lazy var otherAdditionalTextField: UITextField = {
 		$0.setCustomTextField()
 		return $0
@@ -72,7 +67,6 @@ class OtherAdditionalView: UIView {
 		addSubview(otherDiscountLabel)
 		addSubview(otherDiscountTextField)
 		addSubview(otherAdditionalLabel)
-		addSubview(optionalLabel)
 		addSubview(otherAdditionalTextField)
 		addSubview(subtitleOtherAdditionalLabel)
 		addSubview(calculateButton)
@@ -92,9 +86,6 @@ class OtherAdditionalView: UIView {
 			
 			otherAdditionalLabel.topAnchor.constraint(equalTo: otherDiscountTextField.bottomAnchor, constant: 40),
 			otherAdditionalLabel.leadingAnchor.constraint(equalTo: otherDiscountLabel.leadingAnchor),
-			
-			optionalLabel.topAnchor.constraint(equalTo: otherAdditionalLabel.topAnchor),
-			optionalLabel.leadingAnchor.constraint(equalTo: otherAdditionalLabel.trailingAnchor, constant: 5),
 			
 			otherAdditionalTextField.topAnchor.constraint(equalTo: otherAdditionalLabel.bottomAnchor, constant: 10),
 			otherAdditionalTextField.leadingAnchor.constraint(equalTo: otherDiscountLabel.leadingAnchor),
