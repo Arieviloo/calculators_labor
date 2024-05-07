@@ -8,7 +8,7 @@
 "questionInsalubrityAdditional" = "Recebe Adicional de Insalubridade?";
 "questionLevelInsalubrity" = "Selecione o nível de insalubridade:";
 "questionOtherDiscount" = "Outros descontos";
-"questionOtherAdditional" = "Outros adicionais";
+"questionOtherAdditional" = "Outros adicionais (Opcional)";
 "subtitleQuestionOtherAdditional" = "Aqui você considera horas extras, comissões, etc.";
 "optional" = "(opcional)";
 "simulateAgain" = "Simular Novamente";
