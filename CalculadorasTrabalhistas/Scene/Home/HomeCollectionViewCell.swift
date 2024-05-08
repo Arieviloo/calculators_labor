@@ -51,15 +51,17 @@ class HomeCollectionViewCell: UICollectionViewCell {
 	private func configConstraints() {
 		NSLayoutConstraint.activate([
 			calculatorButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-			calculatorButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-			calculatorButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-			calculatorButton.heightAnchor.constraint(equalToConstant: 140),
+			calculatorButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
+			calculatorButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+			calculatorButton.heightAnchor.constraint(equalToConstant: 150),
+			
+			
 			
 			iconCalculatorImage.topAnchor.constraint(equalTo: calculatorButton.topAnchor, constant: 20),
 			iconCalculatorImage.centerXAnchor.constraint(equalTo: calculatorButton.centerXAnchor),
 			iconCalculatorImage.heightAnchor.constraint(equalToConstant: 70),
 			
-			nameCalculatorLabel.topAnchor.constraint(equalTo: iconCalculatorImage.bottomAnchor, constant: 10),
+			nameCalculatorLabel.topAnchor.constraint(equalTo: iconCalculatorImage.bottomAnchor, constant: 20),
 			nameCalculatorLabel.centerXAnchor.constraint(equalTo: calculatorButton.centerXAnchor)
 	
 		])

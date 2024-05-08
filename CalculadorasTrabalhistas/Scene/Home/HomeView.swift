@@ -35,8 +35,8 @@ class HomeView: UIView {
 	private func configConstraints() {
 		NSLayoutConstraint.activate([
 			calculatorCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-			calculatorCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-			calculatorCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+			calculatorCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
+			calculatorCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
 			calculatorCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
 		])
 	}
