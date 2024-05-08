@@ -25,7 +25,7 @@ class HomeViewModel {
 	public func numberOfItens() -> Int { calculators.count }
 	
 	public func sizeCollectionView(view: UIView) -> CGSize {
-		let widthFrame = CGFloat((view.frame.width / 2 ) - 10)
-		return CGSize(width: widthFrame , height: widthFrame)
+		let widthFrame = CGFloat((view.frame.width / 2 ) - 15 )
+		return CGSize(width: widthFrame , height: widthFrame - 15)
 	}
 }
