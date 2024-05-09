@@ -21,7 +21,6 @@ class HomeViewController: UIViewController {
 	}
 	
 	private func configView() {
-		title = homeVM.getTitle()
 		self.navigationController?.navigationBar.titleTextAttributes =  homeVM.getCustomTitle()
 		view.backgroundColor = homeVM.getColorBackground()
 		self.homeView.configProtocolCollectionView(delegate: self, dataSource: self)

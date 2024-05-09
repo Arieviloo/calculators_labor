@@ -2,6 +2,12 @@ import UIKit
 
 class HomeView: UIView {
 	
+	lazy var titleLabel: CTLabel = {
+		$0.numberOfLines = 0
+		
+		return $0
+	}(CTLabel(titleLabel: "titleHome", fontSize: 26, nameFont: "Montserrat-Medium"))
+	
 	lazy var calculatorCollectionView: UICollectionView = {
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .vertical
@@ -29,12 +35,16 @@ class HomeView: UIView {
 	}
 	
 	private func configAddView() {
+		addSubview(titleLabel)
 		addSubview(calculatorCollectionView)
 	}
 	
 	private func configConstraints() {
 		NSLayoutConstraint.activate([
-			calculatorCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+			titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+			titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+			
+			calculatorCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
 			calculatorCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
 			calculatorCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
 			calculatorCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),

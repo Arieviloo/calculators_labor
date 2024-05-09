@@ -44,6 +44,7 @@
 		E26539E02BB347A900D70C28 /* ThirteenthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26539DF2BB347A900D70C28 /* ThirteenthViewController.swift */; };
 		E26539E22BB347AF00D70C28 /* ThirteenthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26539E12BB347AF00D70C28 /* ThirteenthViewModel.swift */; };
 		E26539E42BB34D3300D70C28 /* ListTypePaymentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26539E32BB34D3300D70C28 /* ListTypePaymentViewCell.swift */; };
+		E266C3AA2BED60C5001D3217 /* UINavigation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266C3A92BED60C5001D3217 /* UINavigation+Extension.swift */; };
 		E284F35A2B8F71C3002553B7 /* VacationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E284F3592B8F71C3002553B7 /* VacationResultView.swift */; };
 		E284F35C2B8F71D3002553B7 /* VacationResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E284F35B2B8F71D3002553B7 /* VacationResultViewModel.swift */; };
 		E284F35F2B8F71F9002553B7 /* VacationResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E284F35E2B8F71F9002553B7 /* VacationResultViewController.swift */; };
@@ -126,6 +127,7 @@
 		E26539DF2BB347A900D70C28 /* ThirteenthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthViewController.swift; sourceTree = "<group>"; };
 		E26539E12BB347AF00D70C28 /* ThirteenthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirteenthViewModel.swift; sourceTree = "<group>"; };
 		E26539E32BB34D3300D70C28 /* ListTypePaymentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTypePaymentViewCell.swift; sourceTree = "<group>"; };
+		E266C3A92BED60C5001D3217 /* UINavigation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigation+Extension.swift"; sourceTree = "<group>"; };
 		E284F3592B8F71C3002553B7 /* VacationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationResultView.swift; sourceTree = "<group>"; };
 		E284F35B2B8F71D3002553B7 /* VacationResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationResultViewModel.swift; sourceTree = "<group>"; };
 		E284F35E2B8F71F9002553B7 /* VacationResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationResultViewController.swift; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 				E249714E2B28E5BF000AD4F8 /* CustomDesign.swift */,
 				E201C0FB2B2C722800DFCDEF /* UIViewController+Extension.swift */,
 				E2C9384D2B9180AF008A5E83 /* Double+Extension.swift */,
+				E266C3A92BED60C5001D3217 /* UINavigation+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				E2F81B152B235A7700E181B7 /* UIColor+Extension.swift in Sources */,
 				E216C6F62BDD47F600949523 /* CTTextField.swift in Sources */,
 				E2BE94512B274FB3003FE825 /* HomeView.swift in Sources */,
+				E266C3AA2BED60C5001D3217 /* UINavigation+Extension.swift in Sources */,
 				E2195B282B6BDEBA00F029C0 /* VacationViewController.swift in Sources */,
 				E23B35382BDDB55C00206817 /* CTButton.swift in Sources */,
 				E21074882B2BC30200A7D523 /* OtherAdditionalView.swift in Sources */,
