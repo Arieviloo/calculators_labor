@@ -52,13 +52,13 @@ class ResultViewController: UIViewController {
 
 extension ResultViewController: ResultViewProtocol {
 	func tappedSimulateAgainButton() {
-		if let destinationViewController = navigationController?.viewControllers
-			.filter({$0 is SalaryViewController})
-			.first {navigationController?.popToViewController(destinationViewController, animated: true)}
+		navigationController?.popToViewController(ofClass: SalaryViewController.self)
 	}
 	
 	func tappedOtherCalculationButton() {
 		navigationController?.popToRootViewController(animated: true)
 	}
+	
+	
 	
 }

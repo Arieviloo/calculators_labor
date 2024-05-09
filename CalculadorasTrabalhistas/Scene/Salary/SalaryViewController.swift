@@ -25,10 +25,10 @@ class SalaryViewController: UIViewController {
 		configView()
 	}
 	
-	override func viewWillAppear(_ animated: Bool) {
-		currentString = ""
-		salaryView.salaryValueTextField.text = ""
-	}
+//	override func viewWillAppear(_ animated: Bool) {
+//		currentString = ""
+//		salaryView.salaryValueTextField.text = ""
+//	}
 	
 	private func configView() {
 		title = salaryVM.getTitle()
