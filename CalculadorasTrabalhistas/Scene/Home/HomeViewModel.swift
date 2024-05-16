@@ -5,7 +5,6 @@ class HomeViewModel {
 	private let title = String(localizedKey: "titleHome")
 	private let customTitle =  [ NSAttributedString.Key.foregroundColor:UIColor.black, NSAttributedString.Key.font:UIFont.systemFont(ofSize: 24, weight: .bold)
 	]
-	private let colorBackground = UIColor.white
 	
 	private let calculators: [Calculator] = [
 		Calculator(name: "Salário Líquido", icon: "icon-salariominimo", nameViewController: "NetSalaryViewController"),
@@ -19,8 +18,6 @@ class HomeViewModel {
 	public func getTitle() -> String { title }
 	
 	public func getCustomTitle() -> [NSAttributedString.Key : NSObject] { customTitle }
-	
-	public func getColorBackground() -> UIColor { colorBackground }
 	
 	public func numberOfItens() -> Int { calculators.count }
 	

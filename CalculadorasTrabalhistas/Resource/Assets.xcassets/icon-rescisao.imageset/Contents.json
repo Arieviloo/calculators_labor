@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icon-rescisao.svg",
+      "filename" : "icon-rescisao.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "icon-rescisao@2x 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "icon-rescisao@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

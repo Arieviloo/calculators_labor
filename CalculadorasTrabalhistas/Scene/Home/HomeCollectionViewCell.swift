@@ -55,11 +55,10 @@ class HomeCollectionViewCell: UICollectionViewCell {
 			calculatorButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
 			calculatorButton.heightAnchor.constraint(equalToConstant: 150),
 			
-			
-			
 			iconCalculatorImage.topAnchor.constraint(equalTo: calculatorButton.topAnchor, constant: 20),
 			iconCalculatorImage.centerXAnchor.constraint(equalTo: calculatorButton.centerXAnchor),
 			iconCalculatorImage.heightAnchor.constraint(equalToConstant: 70),
+			iconCalculatorImage.widthAnchor.constraint(equalToConstant: 70),
 			
 			nameCalculatorLabel.topAnchor.constraint(equalTo: iconCalculatorImage.bottomAnchor, constant: 20),
 			nameCalculatorLabel.centerXAnchor.constraint(equalTo: calculatorButton.centerXAnchor)

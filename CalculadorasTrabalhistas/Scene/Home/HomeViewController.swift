@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
 	
 	private func configView() {
 		self.navigationController?.navigationBar.titleTextAttributes =  homeVM.getCustomTitle()
-		view.backgroundColor = homeVM.getColorBackground()
+		view.backgroundColor = UIColor.white
 		self.homeView.configProtocolCollectionView(delegate: self, dataSource: self)
 		self.lockOrientation(.portrait)
 	}
