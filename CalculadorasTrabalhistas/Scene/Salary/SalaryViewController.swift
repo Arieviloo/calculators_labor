@@ -31,6 +31,7 @@ class SalaryViewController: UIViewController {
 			if viewControllers.count > 2 {
 				currentString = ""
 				salaryView.salaryValueTextField.text = ""
+				salaryView.isEnableNextButton(false)
 			}
 		}
 	}
