@@ -5,6 +5,7 @@ class ListReasonViewController: UIViewController {
 	private var listReasonView = ListReasonView()
 	private var listReasonVM = ListReasonViewModel()
 	let listReason = ["Dispensa sem justa causa", "Dispensa com justa causa", "Pedido de demissão"]
+	var listCell = [ListReasonTableViewCell()]
 	
 	init(calculator: Calculator) {
 		super.init(nibName: nil, bundle: nil)
@@ -25,6 +26,8 @@ class ListReasonViewController: UIViewController {
 		configView()
 	}
 	
+	
+	
 	private func configView() {
 		title = listReasonVM.getTitle()
 		listReasonView.protocolsTableView(delegate: self, dataSource: self)
@@ -38,22 +41,28 @@ extension ListReasonViewController: UITableViewDelegate, UITableViewDataSource, 
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: ListReasonTableViewCell.identifier, for: indexPath) as? ListReasonTableViewCell
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: ListReasonTableViewCell.identifier, for: indexPath) as? ListReasonTableViewCell else { return UITableViewCell() }
+		listCell.append(cell)
+		cell.reasonLabel.text = listReason[indexPath.row]
 		let backgroundCell = UIView()
-		cell?.reasonLabel.text = listReason[indexPath.row]
-		backgroundCell.backgroundColor = UIColor.appBlueLight
-		cell?.selectedBackgroundView = backgroundCell
-		
-		return cell ?? UITableViewCell()
+		backgroundCell.backgroundColor = UIColor.systemBackground
+		cell.selectedBackgroundView = backgroundCell
+		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		45
+		50
+	}
+	
+	func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+		let selectedCell = listCell[indexPath.row + 1]
+		selectedCell.borderView.backgroundColor = UIColor.white
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		listReasonVM.setReasonResignation(reason: listReason[indexPath.row])
-		
+		let selectedCell = listCell[indexPath.row + 1]
+		selectedCell.borderView.backgroundColor = UIColor.appBlueLight
 	}
 	
 }

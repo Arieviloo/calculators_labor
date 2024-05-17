@@ -20,6 +20,7 @@ class ListReasonView: UIView {
 	lazy var listReasonTableView: UITableView = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
 		$0.register(ListReasonTableViewCell.self, forCellReuseIdentifier: ListReasonTableViewCell.identifier)
+		$0.separatorStyle = .none
 		return $0
 	}(UITableView())
 	
@@ -36,6 +37,7 @@ class ListReasonView: UIView {
 		configAddView()
 		configConstraints()
 	}
+	
 	
 	public func protocolsTableView(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
 		listReasonTableView.delegate = delegate

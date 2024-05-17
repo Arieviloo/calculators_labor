@@ -4,19 +4,30 @@ class ListReasonTableViewCell: UITableViewCell {
 	
 	static let identifier = "ListReasonTableViewCell"
 	
-	lazy var borderView: UIView = {
+	lazy var borderView: UIButton = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
 		$0.layer.cornerRadius = 20
 		$0.layer.borderColor = UIColor.black.cgColor
 		$0.layer.borderWidth = 1
+		$0.addTarget(self, action: #selector(handlerListMotive), for: .touchUpInside)
 		return $0
-	}(UIView())
+	}(UIButton(type: .system))
 	
 	lazy var reasonLabel: UILabel = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
-		$0.textColor = .red
+	
 		return $0
 	}(UILabel())
+	
+	override func setSelected(_ selected: Bool, animated: Bool) {
+			super.setSelected(selected, animated: animated)
+			self.borderView.isUserInteractionEnabled = selected
+		}
+
+		override func prepareForReuse() {
+			super.prepareForReuse()
+			self.borderView.isUserInteractionEnabled = false
+		}
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -27,6 +38,10 @@ class ListReasonTableViewCell: UITableViewCell {
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+	
+	@objc func handlerListMotive() {
+
 	}
 	
 	private func configAddView() {
