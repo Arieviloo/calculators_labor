@@ -43,7 +43,7 @@ extension ListReasonViewController: UITableViewDelegate, UITableViewDataSource, 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: ListReasonTableViewCell.identifier, for: indexPath) as? ListReasonTableViewCell else { return UITableViewCell() }
 		listCell.append(cell)
-		cell.reasonLabel.text = listReason[indexPath.row]
+		cell.motiveLabel.text = listReason[indexPath.row]
 		let backgroundCell = UIView()
 		backgroundCell.backgroundColor = UIColor.systemBackground
 		cell.selectedBackgroundView = backgroundCell
@@ -56,13 +56,13 @@ extension ListReasonViewController: UITableViewDelegate, UITableViewDataSource, 
 	
 	func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 		let selectedCell = listCell[indexPath.row + 1]
-		selectedCell.borderView.backgroundColor = UIColor.white
+		selectedCell.motiveButton.backgroundColor = UIColor.white
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		listReasonVM.setReasonResignation(reason: listReason[indexPath.row])
 		let selectedCell = listCell[indexPath.row + 1]
-		selectedCell.borderView.backgroundColor = UIColor.appBlueLight
+		selectedCell.motiveButton.backgroundColor = UIColor.appBlueLight
 	}
 	
 }
