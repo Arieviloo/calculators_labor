@@ -5,6 +5,7 @@ class NoticePeriodViewController: UIViewController {
 	private var noticePeriodView = NoticePeriodView()
 	private var noticePeriodVM = NoticePeriodViewModel()
 	let listNoticePeriod = ["Trabalhado", "Indenizado pelo empregador", "Não cumprido pelo empregado", "Dispensado"]
+	var listCell = [NoticePeriodTableViewCell()]
 	
 	init(calculator: Calculator) {
 		super.init(nibName: nil, bundle: nil)
@@ -38,21 +39,29 @@ extension NoticePeriodViewController: UITableViewDelegate, UITableViewDataSource
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: NoticePeriodTableViewCell.identifier, for: indexPath) as? NoticePeriodTableViewCell
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: NoticePeriodTableViewCell.identifier, for: indexPath) as? NoticePeriodTableViewCell else { return UITableViewCell() }
+		listCell.append(cell)
+		cell.noticeLabel.text = listNoticePeriod[indexPath.row]
 		let backgroundCell = UIView()
-		cell?.noticeLabel.text = listNoticePeriod[indexPath.row]
-		backgroundCell.backgroundColor = UIColor.appBlueLight
-		cell?.selectedBackgroundView = backgroundCell
+		backgroundCell.backgroundColor = UIColor.systemBackground
+		cell.selectedBackgroundView = backgroundCell
 		
-		return cell ?? UITableViewCell()
+		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		45
+		60
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		noticePeriodVM.setNoticePeriod(noticePeriod: listNoticePeriod[indexPath.row])
+		let selectedCell = listCell[indexPath.row + 1]
+		selectedCell.noiticeButton.backgroundColor = UIColor.appBlueLight
+	}
+	
+	func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+		let selectedCell = listCell[indexPath.row + 1]
+		selectedCell.noiticeButton.backgroundColor = UIColor.white
 	}
 	
 }

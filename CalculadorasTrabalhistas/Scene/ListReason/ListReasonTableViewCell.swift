@@ -6,9 +6,11 @@ class ListReasonTableViewCell: UITableViewCell {
 	
 	lazy var motiveButton: UIButton = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
+		$0.clipsToBounds = true
 		$0.layer.cornerRadius = 20
 		$0.layer.borderColor = UIColor.black.cgColor
-		$0.layer.borderWidth = 1
+		$0.layer.borderWidth = 0.6
+		$0.layer.masksToBounds = true
 		$0.isUserInteractionEnabled = false
 		return $0
 	}(UIButton(type: .system))
@@ -30,6 +32,13 @@ class ListReasonTableViewCell: UITableViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	
+	override func layoutSubviews() {
+		super.layoutSubviews()
+
+		contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+	}
+	
 	private func configAddView() {
 		contentView.addSubview(motiveButton)
 		motiveButton.addSubview(motiveLabel)
@@ -39,7 +48,7 @@ class ListReasonTableViewCell: UITableViewCell {
 		NSLayoutConstraint.activate([
 			motiveButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
 			motiveButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-			motiveButton.heightAnchor.constraint(equalToConstant: 40),
+			motiveButton.heightAnchor.constraint(equalToConstant: 50),
 			
 			motiveLabel.centerXAnchor.constraint(equalTo: motiveButton.centerXAnchor),
 			motiveLabel.centerYAnchor.constraint(equalTo: motiveButton.centerYAnchor)

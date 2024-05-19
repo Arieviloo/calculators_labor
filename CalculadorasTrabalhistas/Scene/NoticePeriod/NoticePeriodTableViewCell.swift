@@ -4,17 +4,19 @@ class NoticePeriodTableViewCell: UITableViewCell {
 	
 	static let identifier = "NoticePeriodTableViewCell"
 	
-	lazy var borderView: UIView = {
+	lazy var noiticeButton: UIButton = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
+		$0.clipsToBounds = true
 		$0.layer.cornerRadius = 20
 		$0.layer.borderColor = UIColor.black.cgColor
-		$0.layer.borderWidth = 1
+		$0.layer.borderWidth = 0.6
+		$0.layer.masksToBounds = true
+		$0.isUserInteractionEnabled = false
 		return $0
-	}(UIView())
+	}(UIButton(type: .system))
 	
 	lazy var noticeLabel: UILabel = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
-		$0.textColor = .red
 		return $0
 	}(UILabel())
 	
@@ -30,18 +32,18 @@ class NoticePeriodTableViewCell: UITableViewCell {
 	}
 	
 	private func configAddView() {
-		contentView.addSubview(borderView)
-		borderView.addSubview(noticeLabel)
+		contentView.addSubview(noiticeButton)
+		noiticeButton.addSubview(noticeLabel)
 	}
 	
 	private func configConstraints() {
 		NSLayoutConstraint.activate([
-			borderView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-			borderView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-			borderView.heightAnchor.constraint(equalToConstant: 40),
+			noiticeButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+			noiticeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+			noiticeButton.heightAnchor.constraint(equalToConstant: 50),
 			
-			noticeLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-			noticeLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+			noticeLabel.centerXAnchor.constraint(equalTo: noiticeButton.centerXAnchor),
+			noticeLabel.centerYAnchor.constraint(equalTo: noiticeButton.centerYAnchor)
 			
 			
 		])

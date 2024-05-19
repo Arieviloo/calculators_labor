@@ -20,6 +20,7 @@ class NoticePeriodView: UIView {
 	lazy var noticePeriodTableView: UITableView = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
 		$0.register(NoticePeriodTableViewCell.self, forCellReuseIdentifier: NoticePeriodTableViewCell.identifier)
+		
 		return $0
 	}(UITableView())
 	

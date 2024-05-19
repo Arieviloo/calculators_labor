@@ -51,7 +51,7 @@ extension ListReasonViewController: UITableViewDelegate, UITableViewDataSource, 
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		50
+	 70
 	}
 	
 	func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
