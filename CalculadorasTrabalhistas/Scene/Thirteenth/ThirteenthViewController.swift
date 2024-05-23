@@ -5,6 +5,7 @@ class ThirteenthViewController: UIViewController {
 	private let thirteenthView = ThirteenthView()
 	private let thirteenVM = ThirteenthViewModel()
 	private let listTypePayment = ["Parcela única", "Primeira parcela", "Segunda parcela"]
+	var listItensCell = [ListTypePaymentTableViewCell()]
 	
 	init(calculator: Calculator) {
 		super.init(nibName: nil, bundle: nil)
@@ -22,17 +23,17 @@ class ThirteenthViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .white
-		
+		title = thirteenVM.getTitle()
 		hideKeyboardWhenTappedAround()
 		thirteenthView.protocolsTableView(delegate: self, dataSource: self)
 		thirteenthView.configTextFieldDelegate(delegate: self)
 		thirteenthView.delegate(delegate: self)
-
+		
 	}
 }
 
 extension ThirteenthViewController: UITextFieldDelegate {
-
+	
 }
 
 extension ThirteenthViewController: UITableViewDelegate, UITableViewDataSource {
@@ -41,22 +42,32 @@ extension ThirteenthViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: ListTypePaymentTableViewCell.identifier, for: indexPath) as? ListTypePaymentTableViewCell
-		cell?.typePaymentLabel.text = listTypePayment[indexPath.row]
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTypePaymentTableViewCell.identifier, for: indexPath) as? ListTypePaymentTableViewCell else { return UITableViewCell()}
+		listItensCell.append(cell)
+		cell.typePaymentLabel.text = listTypePayment[indexPath.row]
 		let backgroundCell = UIView()
-		backgroundCell.backgroundColor = UIColor.appBlueLight
-		cell?.selectedBackgroundView = backgroundCell
+		backgroundCell.backgroundColor = .none
+		cell.selectedBackgroundView = backgroundCell
 		
-		return cell ?? UITableViewCell()
+		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		45
+		50
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		thirteenVM.setTypePayment(listTypePayment[indexPath.row])
+		let selectedCell = listItensCell[indexPath.row + 1]
+		selectedCell.typePaygmentView.backgroundColor = UIColor.appBlueLight
 	}
+	
+	func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+		let selectedCell = listItensCell[indexPath.row + 1]
+		selectedCell.typePaygmentView.backgroundColor = UIColor.white
+	}
+	
+	
 }
 
 extension ThirteenthViewController: ThirteenthViewProtocol {

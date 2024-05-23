@@ -30,6 +30,7 @@ class ThirteenthView: UIView {
 	lazy var typePaymentTableView: UITableView = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
 		$0.register(ListTypePaymentTableViewCell.self, forCellReuseIdentifier: ListTypePaymentTableViewCell.identifier)
+		$0.separatorStyle = .none
 		return $0
 	}(UITableView())
 	

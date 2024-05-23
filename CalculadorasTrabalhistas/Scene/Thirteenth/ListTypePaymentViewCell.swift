@@ -4,17 +4,19 @@ class ListTypePaymentTableViewCell: UITableViewCell {
 	
 	static let identifier = "ListTypePaymentTableViewCell"
 	
-	lazy var borderView: UIView = {
+	lazy var typePaygmentView: UIButton = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
+		$0.clipsToBounds = true
 		$0.layer.cornerRadius = 20
 		$0.layer.borderColor = UIColor.black.cgColor
-		$0.layer.borderWidth = 1
+		$0.layer.borderWidth = 0.6
+		$0.layer.masksToBounds = true
+		$0.isUserInteractionEnabled = false
 		return $0
-	}(UIView())
+	}(UIButton(type: .system))
 	
 	lazy var typePaymentLabel: UILabel = {
 		$0.translatesAutoresizingMaskIntoConstraints = false
-		$0.textColor = .red
 		return $0
 	}(UILabel())
 	
@@ -30,18 +32,18 @@ class ListTypePaymentTableViewCell: UITableViewCell {
 	}
 	
 	private func configAddView() {
-		contentView.addSubview(borderView)
-		borderView.addSubview(typePaymentLabel)
+		contentView.addSubview(typePaygmentView)
+		typePaygmentView.addSubview(typePaymentLabel)
 	}
 	
 	private func configConstraints() {
 		NSLayoutConstraint.activate([
-			borderView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-			borderView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-			borderView.heightAnchor.constraint(equalToConstant: 40),
+			typePaygmentView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+			typePaygmentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+			typePaygmentView.heightAnchor.constraint(equalToConstant: 40),
 			
-			typePaymentLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-			typePaymentLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+			typePaymentLabel.centerXAnchor.constraint(equalTo: typePaygmentView.centerXAnchor),
+			typePaymentLabel.centerYAnchor.constraint(equalTo: typePaygmentView.centerYAnchor)
 			
 			
 		])

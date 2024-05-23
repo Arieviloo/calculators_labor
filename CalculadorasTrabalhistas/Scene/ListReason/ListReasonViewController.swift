@@ -45,7 +45,7 @@ extension ListReasonViewController: UITableViewDelegate, UITableViewDataSource, 
 		listCell.append(cell)
 		cell.motiveLabel.text = listReason[indexPath.row]
 		let backgroundCell = UIView()
-		backgroundCell.backgroundColor = UIColor.systemBackground
+		backgroundCell.backgroundColor = .none
 		cell.selectedBackgroundView = backgroundCell
 		return cell
 	}
