@@ -48,7 +48,7 @@ class ListReasonTableViewCell: UITableViewCell {
 		NSLayoutConstraint.activate([
 			motiveButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
 			motiveButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-			motiveButton.heightAnchor.constraint(equalToConstant: 50),
+			motiveButton.heightAnchor.constraint(equalToConstant: 40),
 			
 			motiveLabel.centerXAnchor.constraint(equalTo: motiveButton.centerXAnchor),
 			motiveLabel.centerYAnchor.constraint(equalTo: motiveButton.centerYAnchor)

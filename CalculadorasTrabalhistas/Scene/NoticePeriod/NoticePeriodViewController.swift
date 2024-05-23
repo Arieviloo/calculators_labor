@@ -43,14 +43,14 @@ extension NoticePeriodViewController: UITableViewDelegate, UITableViewDataSource
 		listCell.append(cell)
 		cell.noticeLabel.text = listNoticePeriod[indexPath.row]
 		let backgroundCell = UIView()
-		backgroundCell.backgroundColor = UIColor.systemBackground
+		backgroundCell.backgroundColor = .none
 		cell.selectedBackgroundView = backgroundCell
 		
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		60
+		50
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
