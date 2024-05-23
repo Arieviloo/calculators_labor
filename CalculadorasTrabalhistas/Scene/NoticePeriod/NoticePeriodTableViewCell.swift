@@ -40,7 +40,7 @@ class NoticePeriodTableViewCell: UITableViewCell {
 		NSLayoutConstraint.activate([
 			noiticeButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
 			noiticeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-			noiticeButton.heightAnchor.constraint(equalToConstant: 50),
+			noiticeButton.heightAnchor.constraint(equalToConstant: 40),
 			
 			noticeLabel.centerXAnchor.constraint(equalTo: noiticeButton.centerXAnchor),
 			noticeLabel.centerYAnchor.constraint(equalTo: noiticeButton.centerYAnchor)
