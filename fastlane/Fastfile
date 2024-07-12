@@ -1,0 +1,12 @@
+default_platform(:ios)
+
+desc "Lane dedicated for rotete Scheme CI-iOS"
+ lane :ci_iOS do
+  scan(
+    clean: true,
+    scheme: "CI-iOS",
+    sdk: "iphonesimulator",
+    destination: "platform=iOS Simulator,name=iPhone 15 PRO,OS=17.0.1"
+  )
+end
+
